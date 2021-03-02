@@ -1,0 +1,52 @@
+.coin-container {
+  border: 1px solid white;
+  width: 600px;
+  margin: 10px auto;
+  border-radius: 20px;
+  padding: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.212);
+}
+.image-container {
+  background-color: var(--secondary-color);
+  padding: 50px;
+  max-width: 500px;
+  border-radius: 30px;
+  margin: 20px auto;
+  margin-bottom: 10px;
+}
+.image-result {
+  max-width: 400px;
+  border-radius: 10px;
+  margin: 0 auto;
+  border: 20px solid white;
+}
+
+.text-container {
+  margin: 20px;
+  border: 20px solid var(--secondary-color);
+  max-width: 400px;
+  margin: 10px auto;
+  position: relative;
+  bottom: 50px;
+  border-radius: 10px;
+}
+
+.name-result {
+  background-color: rgba(253, 253, 253, 0.363);
+  color: white;
+  font-size: 4rem;
+}
+
+.button {
+  margin: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  background-color: rgba(253, 253, 253, 0.363);
+  font-size: 4rem;
+  font-weight: bold;
+  box-shadow: 0 0 12px 1px white;
+}
+

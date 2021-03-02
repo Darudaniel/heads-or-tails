@@ -1,3 +1,25 @@
+:root {
+  --page-background: rgb(1, 41, 114);
+  /* --secondary-color: rgb(21, 253, 253); */
+  --secondary-color: rgba(17, 247, 255, 0.877);
+  --just-white: #fff;
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: var(--page-background);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  background-color: var(--page-background);
+}
+
 .App {
   text-align: center;
 }
