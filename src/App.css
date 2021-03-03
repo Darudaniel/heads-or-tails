@@ -1,7 +1,8 @@
 :root {
-  --page-background: rgb(1, 41, 114);
-  /* --secondary-color: rgb(21, 253, 253); */
-  --secondary-color: rgba(17, 247, 255, 0.877);
+  /* --page-background: rgb(1, 41, 114); */
+  --page-background: rgb(4, 12, 26);
+  /* --secondary-color: rgba(17, 247, 255, 0.877); */
+  --secondary-color: rgb(0, 247, 255);
   --just-white: #fff;
 }
 *{

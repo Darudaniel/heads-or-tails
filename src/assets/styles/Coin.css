@@ -10,8 +10,8 @@
 }
 .image-container {
   background-color: var(--secondary-color);
-  padding: 50px;
-  max-width: 500px;
+  padding: 50px 1px;
+  max-width: 470px;
   border-radius: 30px;
   margin: 20px auto;
   margin-bottom: 10px;
@@ -21,22 +21,27 @@
   border-radius: 10px;
   margin: 0 auto;
   border: 20px solid white;
+  position: relative;
+  z-index: 2;
 }
 
 .text-container {
   margin: 20px;
+  padding: 3px;
   border: 20px solid var(--secondary-color);
   max-width: 400px;
   margin: 10px auto;
   position: relative;
-  bottom: 50px;
+  bottom: 65px;
   border-radius: 10px;
 }
 
 .name-result {
-  background-color: rgba(253, 253, 253, 0.363);
-  color: white;
+  background-color: aliceblue; 
+  color: black;
   font-size: 4rem;
+  border: 1px solid rgb(0, 0, 0);
+  /* border-radius: 20px; */
 }
 
 .button {
@@ -44,9 +49,16 @@
   padding: 20px;
   border-radius: 20px;
   color: white;
-  background-color: rgba(253, 253, 253, 0.363);
+  background-color: rgb(155, 155, 155);
   font-size: 4rem;
   font-weight: bold;
   box-shadow: 0 0 12px 1px white;
+  position: relative;
+  bottom: 80px;
+  border: 1px solid white;
+}
+
+.button:active {
+  border: 1px solid white;
 }
 
