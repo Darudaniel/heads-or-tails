@@ -6,13 +6,10 @@ class Coin extends React.Component {
     data: {
       results:[],
     },
+    loading: true
   }
   componentDidMount() {
     this.fetchApi()
-  }
-
-  componentDidUpdate() {
-
   }
 
   fetchApi = async() => {
@@ -20,13 +17,14 @@ class Coin extends React.Component {
     const data = await response.json()
     this.setState({
       data: data,
-      hash: Math.floor((Math.random() * 2))
+      hash: Math.floor((Math.random() * 2)),
+      loading: false
     })
   }
 
   handleClick = () => {
     this.setState({
-      hash: Math.floor((Math.random() * 2))
+      hash: Math.floor((Math.random() * 2)),
     })
   }
 
@@ -36,7 +34,8 @@ class Coin extends React.Component {
         <div className="coin-container">
           <figure className="image-container">
           {
-              this.state.data.results[this.state.hash] ?
+              // this.state.data.results[this.state.hash] ?
+              !this.state.loading ?
               <img className="image-result" src={this.state.data.results[this.state.hash].image} alt={`Imagen de ${this.state.data.results[this.state.hash].name}`}/> :
               console.log('no veas la consola bro')
             }

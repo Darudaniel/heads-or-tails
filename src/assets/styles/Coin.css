@@ -56,9 +56,16 @@
   position: relative;
   bottom: 80px;
   border: 1px solid white;
+  outline:none;
+  transition: 0.2s;
 }
 
 .button:active {
   border: 1px solid white;
+  transform: scale(0.9);
+  background-color: grey;
+  box-shadow: none;
 }
+
+
 
