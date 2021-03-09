@@ -1,18 +1,16 @@
 import React from 'react'
 import '../assets/styles/Coin.css'
+import Loader from '../components/Loader'
 
 class Coin extends React.Component {
   state = {
     data: {
       results:[],
     },
+    hash: 1,
     loading: true
   }
-  componentDidMount() {
-    this.fetchApi()
-  }
-
-  fetchApi = async() => {
+  async componentDidMount() {
     const response = await fetch('https://rickandmortyapi.com/api/character')
     const data = await response.json()
     this.setState({
@@ -23,7 +21,7 @@ class Coin extends React.Component {
   }
 
   handleClick = () => {
-    this.setState({
+    this.setState({      
       hash: Math.floor((Math.random() * 2)),
     })
   }
@@ -33,19 +31,17 @@ class Coin extends React.Component {
       <>
         <div className="coin-container">
           <figure className="image-container">
-          {
-              // this.state.data.results[this.state.hash] ?
-              !this.state.loading ?
-              <img className="image-result" src={this.state.data.results[this.state.hash].image} alt={`Imagen de ${this.state.data.results[this.state.hash].name}`}/> :
-              console.log('no veas la consola bro')
-            }
+          {!this.state.loading ?
+            <img className="image-result" src={this.state.data.results[this.state.hash].image} alt={`Imagen de ${this.state.data.results[this.state.hash].name}`}/> :
+            <Loader />
+          }
             
           </figure>
           <div className="text-container">
             {
               this.state.data.results[this.state.hash] ?
               <h2 className="name-result">{this.state.data.results[this.state.hash].name}</h2>:
-              console.log('concentrate en el juego')
+              console.log('No mires la consola')
             }
           </div>
         </div>
