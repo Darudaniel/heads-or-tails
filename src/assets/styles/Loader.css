@@ -1,5 +1,7 @@
 .loader {
   background-color: var(--secondary-color);
-  height: 200px;
+  height: 320px;
+  width: 320px;
+  margin: 0 auto;
   border: 10px solid black;
 }

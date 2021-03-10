@@ -13,17 +13,29 @@ class Coin extends React.Component {
   async componentDidMount() {
     const response = await fetch('https://rickandmortyapi.com/api/character')
     const data = await response.json()
-    this.setState({
-      data: data,
-      hash: Math.floor((Math.random() * 2)),
-      loading: false
+    this.setState(state => {
+      return {
+        data: data,
+        hash: Math.floor((Math.random() * 2)),
+      }
     })
   }
 
   handleClick = () => {
-    this.setState({      
-      hash: Math.floor((Math.random() * 2)),
+    this.setState(state => {    
+      return {
+        hash: Math.floor((Math.random() * 2)),
+        loading: true
+      }  
     })
+    setTimeout(() => {
+      this.setState(state => {    
+        return {
+          hash: Math.floor((Math.random() * 2)),
+          loading: false
+        }  
+      })
+    }, 1000);
   }
 
   render() {
@@ -32,16 +44,19 @@ class Coin extends React.Component {
         <div className="coin-container">
           <figure className="image-container">
           {!this.state.loading ?
-            <img className="image-result" src={this.state.data.results[this.state.hash].image} alt={`Imagen de ${this.state.data.results[this.state.hash].name}`}/> :
+            <img 
+              className="image-result" 
+              src={this.state.data.results[this.state.hash].image} 
+              alt={`Imagen de ${this.state.data.results[this.state.hash].name}`}
+            /> :
             <Loader />
           }
             
           </figure>
           <div className="text-container">
-            {
-              this.state.data.results[this.state.hash] ?
+            {!this.state.loading ?             
               <h2 className="name-result">{this.state.data.results[this.state.hash].name}</h2>:
-              console.log('No mires la consola')
+              <h2 className="name-result">...</h2>
             }
           </div>
         </div>
