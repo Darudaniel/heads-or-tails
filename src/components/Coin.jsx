@@ -11,6 +11,7 @@ class Coin extends React.Component {
     loading: true
   }
   async componentDidMount() {
+    this.handleClick()
     const response = await fetch('https://rickandmortyapi.com/api/character')
     const data = await response.json()
     this.setState(state => {
@@ -35,7 +36,7 @@ class Coin extends React.Component {
           loading: false
         }  
       })
-    }, 1000);
+    }, 700);
   }
 
   render() {
@@ -56,7 +57,9 @@ class Coin extends React.Component {
           <div className="text-container">
             {!this.state.loading ?             
               <h2 className="name-result">{this.state.data.results[this.state.hash].name}</h2>:
-              <h2 className="name-result">...</h2>
+              <h2 className="name-result">
+                <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+              </h2>
             }
           </div>
         </div>
