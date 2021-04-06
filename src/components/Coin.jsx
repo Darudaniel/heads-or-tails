@@ -58,7 +58,7 @@ class Coin extends React.Component {
             {!this.state.loading ?             
               <h2 className="name-result">{this.state.data.results[this.state.hash].name}</h2>:
               <h2 className="name-result">
-                <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                <div class="lds-ellipsis name-loader"><div></div><div></div><div></div><div></div></div>
               </h2>
             }
           </div>

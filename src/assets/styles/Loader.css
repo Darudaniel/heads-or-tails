@@ -16,8 +16,8 @@
   background-position: 50px 70px;
   background-repeat: no-repeat;
   animation: lds-circle 5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-  height: 290px;
-  width: 290px;
+  height: 200px;
+  width: 200px;
 }
 @keyframes lds-circle {
   0%, 100% {
@@ -37,12 +37,12 @@
 
 .loader {
   background-color: var(--secondary-color);
-  height: 320px;
-  width: 320px;
+  height: 253px;
+  width: 200px;
   margin: 0 auto;
 }
 
 .loader-child {
-  height: 500px;
-  width: 500px;
+  height: 250px;
+  width: 200px;
 }
